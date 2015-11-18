@@ -23,12 +23,13 @@ class SwiftVendingMachineTests: XCTestCase {
         super.tearDown()
     }
     
+    //QUESTION, is this the best way to test for nill and should I use ! or?
     func testInputPennyGetsInvalidCoin() {
         // Setup
-        let expectedValue: String = "Invalid Coin"
+        let expectedValue: String! = nil
         
         // Action
-        let result: String = machine.readCoin(CoinSizeEnum.penny, coinweight: CoinWeightEnum.penny)
+        let result: NSDecimalNumber? = machine.readCoin("penny", coinweight: "penny")
         
         // Assert
         XCTAssertEqual(result, expectedValue)
@@ -36,15 +37,18 @@ class SwiftVendingMachineTests: XCTestCase {
     
     func testInputNickelGetsFiveCents() {
         //Setup
-        let expectedValue: String = ".05"
+        let expectedValue: NSDecimalNumber = 0.05
         
         //Action
-        let result: Int = machine.readCoin(CoinSizeEnum.nickel, coinweight: CoinWeightEnum.penny)
+        let result: NSDecimalNumber? = machine.readCoin("nickel", coinweight: "nickel")
         
         //Assert
         XCTAssertEqual(result, expectedValue)
-        
     }
+    
+     
+    
+    
     
     
 }

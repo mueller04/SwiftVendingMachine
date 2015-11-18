@@ -1,15 +1,15 @@
 import Foundation
 
 enum CoinSizeEnum: String {
-    case penny
-    case nickel
-    case dime
-    case quarter
+    case penny = "penny"
+    case nickel = "nickel"
+    case dime = "dime"
+    case quarter = "quarter"
 }
 
 enum CoinWeightEnum: String {
-    case penny
-    case nickel
-    case dime
-    case quarter
+    case penny = "penny"
+    case nickel = "nickel"
+    case dime = "dime"
+    case quarter = "quarter"
 }
