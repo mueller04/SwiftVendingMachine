@@ -142,7 +142,7 @@ class SwiftVendingMachineTests: XCTestCase {
     
     func testBalanceTooLowDisplaysProductPriceForCola() {
         // Setup
-        let expectedValue: String = "PRICE: $1.00"
+        let expectedValue: String = "PRICE: 100 cents"
         
         // Action
         var result: String? = machine.purchase("cola")
