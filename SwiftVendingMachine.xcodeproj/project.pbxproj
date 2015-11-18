@@ -15,6 +15,13 @@
 		27E9A24D1BFCC0080064ECCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E9A24B1BFCC0080064ECCE /* LaunchScreen.storyboard */; };
 		27E9A2581BFCC0080064ECCE /* SwiftVendingMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2571BFCC0080064ECCE /* SwiftVendingMachineTests.swift */; };
 		27E9A2631BFCC0080064ECCE /* SwiftVendingMachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2621BFCC0080064ECCE /* SwiftVendingMachineUITests.swift */; };
+		27E9A2701BFCC1CE0064ECCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2401BFCC0080064ECCE /* AppDelegate.swift */; };
+		27E9A2711BFCC1D10064ECCE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2421BFCC0080064ECCE /* FirstViewController.swift */; };
+		27E9A2721BFCC1D30064ECCE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2441BFCC0080064ECCE /* SecondViewController.swift */; };
+		27E9A2741BFCC93E0064ECCE /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2731BFCC93E0064ECCE /* Machine.swift */; };
+		27E9A2751BFCC9410064ECCE /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2731BFCC93E0064ECCE /* Machine.swift */; };
+		27E9A2761BFCC9420064ECCE /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2731BFCC93E0064ECCE /* Machine.swift */; };
+		27E9A2781BFCCA9A0064ECCE /* CoinEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2771BFCCA9A0064ECCE /* CoinEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,8 @@
 		27E9A25E1BFCC0080064ECCE /* SwiftVendingMachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVendingMachineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E9A2621BFCC0080064ECCE /* SwiftVendingMachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVendingMachineUITests.swift; sourceTree = "<group>"; };
 		27E9A2641BFCC0080064ECCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E9A2731BFCC93E0064ECCE /* Machine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
+		27E9A2771BFCCA9A0064ECCE /* CoinEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +115,8 @@
 				27E9A2491BFCC0080064ECCE /* Assets.xcassets */,
 				27E9A24B1BFCC0080064ECCE /* LaunchScreen.storyboard */,
 				27E9A24E1BFCC0080064ECCE /* Info.plist */,
+				27E9A2731BFCC93E0064ECCE /* Machine.swift */,
+				27E9A2771BFCCA9A0064ECCE /* CoinEnum.swift */,
 			);
 			path = SwiftVendingMachine;
 			sourceTree = "<group>";
@@ -260,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E9A2451BFCC0080064ECCE /* SecondViewController.swift in Sources */,
+				27E9A2741BFCC93E0064ECCE /* Machine.swift in Sources */,
 				27E9A2411BFCC0080064ECCE /* AppDelegate.swift in Sources */,
+				27E9A2781BFCCA9A0064ECCE /* CoinEnum.swift in Sources */,
 				27E9A2431BFCC0080064ECCE /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E9A2721BFCC1D30064ECCE /* SecondViewController.swift in Sources */,
+				27E9A2711BFCC1D10064ECCE /* FirstViewController.swift in Sources */,
+				27E9A2751BFCC9410064ECCE /* Machine.swift in Sources */,
+				27E9A2701BFCC1CE0064ECCE /* AppDelegate.swift in Sources */,
 				27E9A2581BFCC0080064ECCE /* SwiftVendingMachineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E9A2631BFCC0080064ECCE /* SwiftVendingMachineUITests.swift in Sources */,
+				27E9A2761BFCC9420064ECCE /* Machine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,16 +21,17 @@ class SwiftVendingMachineTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func inputPennyGetsInvalidCoin() {
+        // Setup
+        let machine = Machine()
+        let expectedValue: String = "Invalid Coin"
+        
+        // Action
+        let result: String = machine.readCoin(CoinSizeEnum.penny, CoinWeightEnum.penny)
+        
+        // Assert
+        XCTAssertEqual(result, expectedValue)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
 }
