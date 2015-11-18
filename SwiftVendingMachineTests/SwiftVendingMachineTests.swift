@@ -21,24 +21,22 @@ class SwiftVendingMachineTests: XCTestCase {
         super.tearDown()
     }
     
-    //QUESTION, is this the best way to test for nill and should I use ! or?
     func testInputPennyGetsInvalidCoin() {
         // Setup
-        let expectedValue: String! = nil
         
         // Action
-        let result: NSDecimalNumber? = machine.readCoin("penny", coinweight: "penny")
+        let result: Int? = machine.readCoin("penny", coinweight: "penny")
         
         // Assert
-        XCTAssertEqual(result, expectedValue)
+        XCTAssertEqual(result, nil)
     }
     
     func testInputNickelGetsFiveCents() {
         //Setup
-        let expectedValue: NSDecimalNumber = 0.05
+        let expectedValue: Int = 5
         
         //Action
-        let result: NSDecimalNumber? = machine.readCoin("nickel", coinweight: "nickel")
+        let result: Int? = machine.readCoin("nickel", coinweight: "nickel")
         
         //Assert
         XCTAssertEqual(result, expectedValue)
@@ -46,10 +44,10 @@ class SwiftVendingMachineTests: XCTestCase {
     
     func testInputDimeGetsTenCents() {
         // Setup
-        let expectedValue: NSDecimalNumber = 0.10
+        let expectedValue: Int = 10
         
         // Action
-        let result: NSDecimalNumber? = machine.readCoin("dime", coinweight: "dime")
+        let result: Int? = machine.readCoin("dime", coinweight: "dime")
         
         // Assert
         XCTAssertEqual(result, expectedValue)
@@ -57,10 +55,10 @@ class SwiftVendingMachineTests: XCTestCase {
     
     func testInputQuarterGetsTwentyFiveCents() {
         // Setup
-        let expectedValue: NSDecimalNumber = 0.25
+        let expectedValue: Int = 25
         
         // Action
-        let result: NSDecimalNumber? = machine.readCoin("quarter", coinweight: "quarter")
+        let result: Int? = machine.readCoin("quarter", coinweight: "quarter")
         
         print(expectedValue)
         
@@ -70,29 +68,74 @@ class SwiftVendingMachineTests: XCTestCase {
     
     // INPUT TESTS
     
-    func testInputNickAddsFiveCentsToTotal() {
+    func testInputNickelAddsFiveCentsToTotal() {
         // Setup
-        let expectedValue: NSDecimalNumber = 0.05
+        let expectedValue: Int = 5
     
         // Action
-        let result: NSDecimalNumber? = machine.insertCoin("dime")
+        let result: Int? = machine.insertCoin("nickel")
     
         // Assert
     
         XCTAssertEqual(result, expectedValue)
     }
     
-    func testInputTwoNickAddsTenCentsToTotal() {
+    func testInputTwoNickelsAddsTenCentsToTotal() {
         // Setup
-        let expectedValue: NSDecimalNumber = 0.10
+        let expectedValue: Int = 10
         
         // Action
-        var result: NSDecimalNumber? = machine.insertCoin("dime")
+        var result: Int? = machine.insertCoin("nickel")
+        result = machine.insertCoin("nickel")
+        
+        // Assert
+        
+        XCTAssertEqual(result, expectedValue)
+    }
+    
+    func testInputThreeDimesAddsThirtyCentsToTotal() {
+        // Setup
+        let expectedValue: Int = 30
+        
+        // Action
+        var result: Int? = machine.insertCoin("dime")
+        result = machine.insertCoin("dime")
         result = machine.insertCoin("dime")
         
         // Assert
         
         XCTAssertEqual(result, expectedValue)
+    }
+    
+    func testInputTwoQuartersOneDimeOneNickelAddsSixtyFiveToTotal() {
+        // Setup
+        let expectedValue: Int = 65
+        
+        // Action
+        var result: Int? = machine.insertCoin("quarter")
+        result = machine.insertCoin("quarter")
+        result = machine.insertCoin("dime")
+        result = machine.insertCoin("nickel")
+        
+        // Assert
+        
+        XCTAssertEqual(result, expectedValue)
+        
+    }
+    
+    func testInputOneQuartersOnePennyOneNickelAddsThirtyToTotal() {
+        // Setup
+        let expectedValue: Int = 30
+        
+        // Action
+        var result: Int? = machine.insertCoin("quarter")
+        result = machine.insertCoin("penny")
+        result = machine.insertCoin("nickel")
+        
+        // Assert
+        
+        XCTAssertEqual(result, expectedValue)
+        
     }
     
     
