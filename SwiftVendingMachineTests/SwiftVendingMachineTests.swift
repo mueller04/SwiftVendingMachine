@@ -68,7 +68,15 @@ class SwiftVendingMachineTests: XCTestCase {
         XCTAssertEqual(result, expectedValue)
     }
     
+    func testInputNickAddsFiveCentsToTotal() {
+        // Setup
+        let expectedValue: NSDecimalNumber = 0.05
     
+        // Action
+        let result: NSDecimalNumber? = machine.insertCoin("dime")
     
+        // Assert
     
+        XCTAssertEqual(result, expectedValue)
+    }
 }

@@ -13,7 +13,6 @@ class Machine {
         } else {
             return nil
         }
-        
-        
     }
+    
 }
