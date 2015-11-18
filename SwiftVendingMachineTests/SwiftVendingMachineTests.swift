@@ -1,10 +1,8 @@
-//
-//  SwiftVendingMachineTests.swift
-//  SwiftVendingMachineTests
-//
-//  Created by Mike Mueller on 11/18/15.
-//  Copyright © 2015 Mike Mueller. All rights reserved.
-//
+// Setup
+
+// Action
+
+// Assert
 
 import XCTest
 @testable import SwiftVendingMachine
@@ -46,7 +44,16 @@ class SwiftVendingMachineTests: XCTestCase {
         XCTAssertEqual(result, expectedValue)
     }
     
-     
+    func testInputDimeGetsTenCents() {
+        // Setup
+        let expectedValue: NSDecimalNumber = 0.10
+        
+        // Action
+        let result: NSDecimalNumber? = machine.readCoin("dime", coinweight: "dime")
+        
+        // Assert
+        XCTAssertEqual(result, expectedValue)
+    }
     
     
     
