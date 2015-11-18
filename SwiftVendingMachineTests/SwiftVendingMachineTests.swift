@@ -55,6 +55,19 @@ class SwiftVendingMachineTests: XCTestCase {
         XCTAssertEqual(result, expectedValue)
     }
     
+    func testInputQuarterGetsTwentyFiveCents() {
+        // Setup
+        let expectedValue: NSDecimalNumber = 0.25
+        
+        // Action
+        let result: NSDecimalNumber? = machine.readCoin("quarter", coinweight: "quarter")
+        
+        print(expectedValue)
+        
+        // Assert!
+        XCTAssertEqual(result, expectedValue)
+    }
+    
     
     
     
