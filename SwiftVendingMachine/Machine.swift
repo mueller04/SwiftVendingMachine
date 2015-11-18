@@ -15,4 +15,9 @@ class Machine {
         }
     }
     
+    func insertCoin(coin: String) -> NSDecimalNumber? {
+    return 0.05
+    
+    }
+    
 }
