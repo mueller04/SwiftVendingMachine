@@ -138,6 +138,21 @@ class SwiftVendingMachineTests: XCTestCase {
         
     }
     
+    //PRODUCT TESTS
+    
+    func testBalanceTooLowDisplaysProductPriceForCola() {
+        // Setup
+        let expectedValue: String = "PRICE: $1.00"
+        
+        // Action
+        var result: String? = machine.purchase("cola")
+        
+        // Assert
+        
+        XCTAssertEqual(result, expectedValue)
+        
+    }
+    
     
     
     
