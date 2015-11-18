@@ -22,6 +22,8 @@
 		27E9A2751BFCC9410064ECCE /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2731BFCC93E0064ECCE /* Machine.swift */; };
 		27E9A2761BFCC9420064ECCE /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2731BFCC93E0064ECCE /* Machine.swift */; };
 		27E9A2781BFCCA9A0064ECCE /* CoinEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2771BFCCA9A0064ECCE /* CoinEnum.swift */; };
+		27E9A2791BFCCBDC0064ECCE /* CoinEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2771BFCCA9A0064ECCE /* CoinEnum.swift */; };
+		27E9A27A1BFCCBDD0064ECCE /* CoinEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2771BFCCA9A0064ECCE /* CoinEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +289,7 @@
 				27E9A2751BFCC9410064ECCE /* Machine.swift in Sources */,
 				27E9A2701BFCC1CE0064ECCE /* AppDelegate.swift in Sources */,
 				27E9A2581BFCC0080064ECCE /* SwiftVendingMachineTests.swift in Sources */,
+				27E9A2791BFCCBDC0064ECCE /* CoinEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +299,7 @@
 			files = (
 				27E9A2631BFCC0080064ECCE /* SwiftVendingMachineUITests.swift in Sources */,
 				27E9A2761BFCC9420064ECCE /* Machine.swift in Sources */,
+				27E9A27A1BFCCBDD0064ECCE /* CoinEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

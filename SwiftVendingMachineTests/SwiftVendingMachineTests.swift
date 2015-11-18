@@ -10,10 +10,12 @@ import XCTest
 @testable import SwiftVendingMachine
 
 class SwiftVendingMachineTests: XCTestCase {
+    private var machine: Machine!
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        machine = Machine()
+        
     }
     
     override func tearDown() {
@@ -21,16 +23,27 @@ class SwiftVendingMachineTests: XCTestCase {
         super.tearDown()
     }
     
-    func inputPennyGetsInvalidCoin() {
+    func testInputPennyGetsInvalidCoin() {
         // Setup
-        let machine = Machine()
         let expectedValue: String = "Invalid Coin"
         
         // Action
-        let result: String = machine.readCoin(CoinSizeEnum.penny, CoinWeightEnum.penny)
+        let result: String = machine.readCoin(CoinSizeEnum.penny, coinweight: CoinWeightEnum.penny)
         
         // Assert
         XCTAssertEqual(result, expectedValue)
+    }
+    
+    func testInputNickelGetsFiveCents() {
+        //Setup
+        let expectedValue: String = ".05"
+        
+        //Action
+        let result: Int = machine.readCoin(CoinSizeEnum.nickel, coinweight: CoinWeightEnum.penny)
+        
+        //Assert
+        XCTAssertEqual(result, expectedValue)
+        
     }
     
     
