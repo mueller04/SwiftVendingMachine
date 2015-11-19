@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274071451BFD20020021FF5D /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274071441BFD20020021FF5D /* TestUtils.swift */; };
+		274071471BFD73DB0021FF5D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274071461BFD73DB0021FF5D /* Coin.swift */; };
+		2740714A1BFE196E0021FF5D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274071461BFD73DB0021FF5D /* Coin.swift */; };
+		2740714B1BFE196F0021FF5D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274071461BFD73DB0021FF5D /* Coin.swift */; };
+		2740714D1BFE1ABA0021FF5D /* InsertCoinSlotRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740714C1BFE1ABA0021FF5D /* InsertCoinSlotRepo.swift */; };
+		2740714E1BFE1E8E0021FF5D /* InsertCoinSlotRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740714C1BFE1ABA0021FF5D /* InsertCoinSlotRepo.swift */; };
+		2740714F1BFE1E8F0021FF5D /* InsertCoinSlotRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740714C1BFE1ABA0021FF5D /* InsertCoinSlotRepo.swift */; };
 		27E9A2411BFCC0080064ECCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2401BFCC0080064ECCE /* AppDelegate.swift */; };
 		27E9A2431BFCC0080064ECCE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2421BFCC0080064ECCE /* FirstViewController.swift */; };
 		27E9A2451BFCC0080064ECCE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2441BFCC0080064ECCE /* SecondViewController.swift */; };
@@ -44,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		274071441BFD20020021FF5D /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		274071461BFD73DB0021FF5D /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		2740714C1BFE1ABA0021FF5D /* InsertCoinSlotRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertCoinSlotRepo.swift; sourceTree = "<group>"; };
 		27E9A23D1BFCC0080064ECCE /* SwiftVendingMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVendingMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E9A2401BFCC0080064ECCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E9A2421BFCC0080064ECCE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +129,8 @@
 				27E9A24E1BFCC0080064ECCE /* Info.plist */,
 				27E9A2731BFCC93E0064ECCE /* Machine.swift */,
 				27E9A2771BFCCA9A0064ECCE /* CoinEnum.swift */,
+				274071461BFD73DB0021FF5D /* Coin.swift */,
+				2740714C1BFE1ABA0021FF5D /* InsertCoinSlotRepo.swift */,
 			);
 			path = SwiftVendingMachine;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 			children = (
 				27E9A2571BFCC0080064ECCE /* SwiftVendingMachineTests.swift */,
 				27E9A2591BFCC0080064ECCE /* Info.plist */,
+				274071441BFD20020021FF5D /* TestUtils.swift */,
 			);
 			path = SwiftVendingMachineTests;
 			sourceTree = "<group>";
@@ -272,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2740714D1BFE1ABA0021FF5D /* InsertCoinSlotRepo.swift in Sources */,
+				274071471BFD73DB0021FF5D /* Coin.swift in Sources */,
 				27E9A2451BFCC0080064ECCE /* SecondViewController.swift in Sources */,
 				27E9A2741BFCC93E0064ECCE /* Machine.swift in Sources */,
 				27E9A2411BFCC0080064ECCE /* AppDelegate.swift in Sources */,
@@ -288,8 +303,11 @@
 				27E9A2711BFCC1D10064ECCE /* FirstViewController.swift in Sources */,
 				27E9A2751BFCC9410064ECCE /* Machine.swift in Sources */,
 				27E9A2701BFCC1CE0064ECCE /* AppDelegate.swift in Sources */,
+				274071451BFD20020021FF5D /* TestUtils.swift in Sources */,
 				27E9A2581BFCC0080064ECCE /* SwiftVendingMachineTests.swift in Sources */,
+				2740714A1BFE196E0021FF5D /* Coin.swift in Sources */,
 				27E9A2791BFCCBDC0064ECCE /* CoinEnum.swift in Sources */,
+				2740714E1BFE1E8E0021FF5D /* InsertCoinSlotRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +317,8 @@
 			files = (
 				27E9A2631BFCC0080064ECCE /* SwiftVendingMachineUITests.swift in Sources */,
 				27E9A2761BFCC9420064ECCE /* Machine.swift in Sources */,
+				2740714B1BFE196F0021FF5D /* Coin.swift in Sources */,
+				2740714F1BFE1E8F0021FF5D /* InsertCoinSlotRepo.swift in Sources */,
 				27E9A27A1BFCCBDD0064ECCE /* CoinEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +528,7 @@
 				27E9A2691BFCC0080064ECCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27E9A26A1BFCC0080064ECCE /* Build configuration list for PBXNativeTarget "SwiftVendingMachineTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +537,7 @@
 				27E9A26C1BFCC0080064ECCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27E9A26D1BFCC0080064ECCE /* Build configuration list for PBXNativeTarget "SwiftVendingMachineUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +546,7 @@
 				27E9A26F1BFCC0080064ECCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

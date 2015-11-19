@@ -1,47 +1,30 @@
 import Foundation
 
-class Machine {
+public class Machine {
     var totalBalance: Int = 0
+    var coinsSlotRepo = [Coin]()
+
     
-    let products = [
-        "cola" : 100,
-        "chips" : 50,
-        "candy" : 65
-    ]
-    
-    func readCoin(coinsize: String, coinweight: String) -> Int? {
+    public func insertCoin(coin: Coin) -> Bool? {
         
-        if (coinsize == CoinSizeEnum.nickel.rawValue && coinweight == CoinWeightEnum.nickel.rawValue) {
-            return 5
-        } else if (coinsize == CoinSizeEnum.dime.rawValue && coinweight == CoinWeightEnum.dime.rawValue) {
-            return 10
-        } else if ((coinsize == CoinSizeEnum.quarter.rawValue && coinweight == CoinWeightEnum.quarter.rawValue)) {
-            return 25
+        if (coin.value == 1) {
+            return false
         } else {
-            return nil
+            coinsSlotRepo.append(coin)
+            totalBalance += coin.value
+            return true
         }
     }
     
-    func insertCoin(coin: String) -> Int? {
-        var calculatedTotal: Int? = readCoin(coin, coinweight: coin)
-        
-        if (calculatedTotal != nil) {
-            totalBalance += calculatedTotal!
-        }
-        return totalBalance
-    }
     
-    func purchase(product: String) -> String {
+    func purchase(product: ProductEnum) -> String {
         
-        if (products[product] > totalBalance) {
-            return ("PRICE: \(products[product]!) cents")
+        if (product.rawValue > totalBalance){
+            
+            return ("PRICE: \(product.rawValue) cents")
         } else {
-            totalBalance -= products[product]!
+            totalBalance -= product.rawValue
             return "Success"
         }
-        
-        
-        
     }
-    
 }
