@@ -2,7 +2,7 @@ import Foundation
 
 class TestUtils {
     
-    static func givenProductPriceIncrementby40 (price: Int) -> Int {
+    static func givenProductPriceIncrementBalanceBy(price: Int) -> Int {
         return price + 40
     }
     

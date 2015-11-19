@@ -5,26 +5,24 @@ public class Machine {
     var coinsSlotRepo = [Coin]()
 
     
-    public func insertCoin(coin: Coin) -> Bool? {
+    public func insertCoin(coin: Coin) -> Bool {
         
         if (coin.value == 1) {
             return false
         } else {
-            coinsSlotRepo.append(coin)
+            // coinsSlotRepo.append(coin) // TODO: Test Me
             totalBalance += coin.value
-            return true
+            return true 
         }
     }
     
     
-    func purchase(product: ProductEnum) -> String {
-        
-        if (product.rawValue > totalBalance){
-            
-            return ("PRICE: \(product.rawValue) cents")
+    func purchase(product: ProductEnum) -> Bool {
+        if (product.rawValue > totalBalance) {
+            return false
         } else {
             totalBalance -= product.rawValue
-            return "Success"
+            return true
         }
     }
 }

@@ -31,6 +31,39 @@ class SwiftVendingMachineTests: XCTestCase {
         XCTAssertEqual(result, false)
     }
     
+    func testInputDimeIsValidCoin() {
+        // Setup
+        let coin = Coin(type: CoinType.DIME)
+        
+        // Action
+        let result: Bool = machine.insertCoin(coin)
+        
+        // Assert
+        XCTAssertEqual(result, true)
+    }
+    
+    func testInputNickelIsValidCoin() {
+        // Setup
+        let coin = Coin(type: CoinType.NICKEL)
+        
+        // Action
+        let result: Bool = machine.insertCoin(coin)
+        
+        // Assert
+        XCTAssertEqual(result, true)
+    }
+    
+    func testInputQuarterIsValidCoin() {
+        // Setup
+        let coin = Coin(type: CoinType.QUARTER)
+        
+        // Action
+        let result: Bool = machine.insertCoin(coin)
+        
+        // Assert
+        XCTAssertEqual(result, true)
+    }
+    
     func testInputDimeGetsTenCents() {
         // Setup
         let expectedValue: Int = 10
@@ -148,14 +181,13 @@ class SwiftVendingMachineTests: XCTestCase {
     
     func testBalanceTooLowDisplaysProductPriceForCola() {
         // Setup
-        let expectedValue: String = "PRICE: 100 cents"
         
         // Action
-        let result: String? = machine.purchase(ProductEnum.COLA)
+        let result: Bool = machine.purchase(ProductEnum.COLA)
         
         // Assert
         
-        XCTAssertEqual(result, expectedValue)
+        XCTAssertEqual(result, false)
     }
     
     
@@ -163,48 +195,47 @@ class SwiftVendingMachineTests: XCTestCase {
     
     func testBalanceTooLowDisplaysProductPriceForCandy() {
         // Setup
-        let expectedValue: String = "PRICE: 65 cents"
         TestUtils.createBeginningBalance(63, machine: machine)
         
         // Action
  
-        let purchaseResult: String? = machine.purchase(ProductEnum.CANDY)
+        let purchaseResult: Bool = machine.purchase(ProductEnum.CANDY)
         
         // Assert
         
-        XCTAssertEqual(purchaseResult, expectedValue)
+        XCTAssertEqual(purchaseResult, false)
     }
     
     func testBalanceExactForCandyAllowsPurchase() {
         // Setup
-        let expectedValue: String = "Success"
         TestUtils.createBeginningBalance(65, machine: machine)
         
         // Action
         
-        let purchaseResult: String? = machine.purchase(ProductEnum.CANDY)
+        let purchaseResult: Bool = machine.purchase(ProductEnum.CANDY)
         
         // Assert
         
-        XCTAssertEqual(purchaseResult, expectedValue)
+        XCTAssertEqual(purchaseResult, true)
     }
     
     
     
     func testEnoughCentsInsertedCorrectChangeIsMade() {
         // Setup
+        let extraBalance : Int = 40
         let theProductPrice: Int = ProductEnum.CANDY.rawValue
-        let totalBalanceToInsert: Int = TestUtils.givenProductPriceIncrementby40(theProductPrice)
+        let totalBalanceToInsert: Int = theProductPrice + extraBalance
         TestUtils.createBeginningBalance(totalBalanceToInsert, machine: machine)
         
-        let expectedReturnValue: String = "Success"
-        let expectedBalance: Int = 40
+        //let expectedReturnValue: String = "Success"
+        let expectedBalance: Int = extraBalance
         
         // Action
-        let purchaseReturnValue: String? = machine.purchase(ProductEnum.CANDY)
+        let purchaseReturnValue: Bool = machine.purchase(ProductEnum.CANDY)
         
         // Assert
-        XCTAssertEqual(purchaseReturnValue, expectedReturnValue)
+        XCTAssertEqual(purchaseReturnValue, true)
         XCTAssertEqual(machine.totalBalance, expectedBalance)
     }
     
@@ -215,16 +246,17 @@ class SwiftVendingMachineTests: XCTestCase {
         let theProductPrice: Int = ProductEnum.COLA.rawValue
         let productEnumName : ProductEnum = ProductEnum.COLA
         let machineBalanceExpected : Int = 40
-        let balanceToInsertIntoCoinSlot: Int = TestUtils.givenProductPriceIncrementby40(theProductPrice)
+        let balanceToInsertIntoCoinSlot: Int = theProductPrice + machineBalanceExpected
 
         // Prep the machine with enough balance for change..
         TestUtils.createBeginningBalance(balanceToInsertIntoCoinSlot, machine: machine)
 
         // Action
         machine.purchase(productEnumName)
-        let resultBalance = machine.totalBalance
+        
 
         // Assert
+        let resultBalance = machine.totalBalance
         XCTAssertEqual(resultBalance, machineBalanceExpected)
     }
     
@@ -240,9 +272,10 @@ class SwiftVendingMachineTests: XCTestCase {
         
         // Action
         machine.purchase(productEnumName)
-        let resultBalance = machine.totalBalance
+        
         
         // Assert
+        let resultBalance = machine.totalBalance
         XCTAssertEqual(resultBalance, machineBalanceExpected)
     }
     
