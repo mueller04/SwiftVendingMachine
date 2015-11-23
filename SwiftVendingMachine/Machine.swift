@@ -1,12 +1,11 @@
 import Foundation
 
-public class Machine {
+class Machine {
     var totalBalance: Int = 0
     var coinsSlotRepo = [Coin]()
+    var display: String = "Insert Coin"
 
-    
-    public func insertCoin(coin: Coin) -> Bool {
-        
+    func insertCoin(coin: Coin) -> Bool {
         if (coin.value == 1) {
             return false
         } else {
@@ -15,8 +14,7 @@ public class Machine {
             return true 
         }
     }
-    
-    
+
     func purchase(product: ProductEnum) -> Bool {
         if (product.rawValue > totalBalance) {
             return false

@@ -1,10 +1,10 @@
 import Foundation
 
-public class Coin {
+class Coin {
     let value: Int
     let coinType: CoinType
     
-     init(type: CoinType){
+     init(type: CoinType) {
         value = type.rawValue
         coinType = type
     }

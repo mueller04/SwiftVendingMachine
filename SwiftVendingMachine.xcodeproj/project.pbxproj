@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271B72EE1BFE70560020AF84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E9A24B1BFCC0080064ECCE /* LaunchScreen.storyboard */; };
+		271B72EF1BFE705C0020AF84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E9A2491BFCC0080064ECCE /* Assets.xcassets */; };
+		271B72F01BFE70610020AF84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E9A2461BFCC0080064ECCE /* Main.storyboard */; };
+		271B72F11BFE70650020AF84 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2441BFCC0080064ECCE /* SecondViewController.swift */; };
+		271B72F21BFE70680020AF84 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2421BFCC0080064ECCE /* FirstViewController.swift */; };
+		271B72F31BFE706B0020AF84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9A2401BFCC0080064ECCE /* AppDelegate.swift */; };
+		273DA3411BFE675100FD7023 /* FirstViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DA3401BFE675100FD7023 /* FirstViewControllerTests.swift */; };
+		273DA3421BFE67C900FD7023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E9A2461BFCC0080064ECCE /* Main.storyboard */; };
+		273DA3431BFE67CD00FD7023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E9A2491BFCC0080064ECCE /* Assets.xcassets */; };
+		273DA3441BFE67D200FD7023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E9A24B1BFCC0080064ECCE /* LaunchScreen.storyboard */; };
+		273DA3461BFE6A8500FD7023 /* Mocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DA3451BFE6A8500FD7023 /* Mocker.swift */; };
+		273DA3481BFE6AA200FD7023 /* MockMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DA3471BFE6AA200FD7023 /* MockMachine.swift */; };
 		274071451BFD20020021FF5D /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274071441BFD20020021FF5D /* TestUtils.swift */; };
 		274071471BFD73DB0021FF5D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274071461BFD73DB0021FF5D /* Coin.swift */; };
 		2740714A1BFE196E0021FF5D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274071461BFD73DB0021FF5D /* Coin.swift */; };
@@ -51,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		273DA3401BFE675100FD7023 /* FirstViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewControllerTests.swift; sourceTree = "<group>"; };
+		273DA3451BFE6A8500FD7023 /* Mocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocker.swift; sourceTree = "<group>"; };
+		273DA3471BFE6AA200FD7023 /* MockMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMachine.swift; sourceTree = "<group>"; };
 		274071441BFD20020021FF5D /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		274071461BFD73DB0021FF5D /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		2740714C1BFE1ABA0021FF5D /* InsertCoinSlotRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertCoinSlotRepo.swift; sourceTree = "<group>"; };
@@ -139,8 +154,11 @@
 			isa = PBXGroup;
 			children = (
 				27E9A2571BFCC0080064ECCE /* SwiftVendingMachineTests.swift */,
+				273DA3401BFE675100FD7023 /* FirstViewControllerTests.swift */,
+				273DA3471BFE6AA200FD7023 /* MockMachine.swift */,
 				27E9A2591BFCC0080064ECCE /* Info.plist */,
 				274071441BFD20020021FF5D /* TestUtils.swift */,
+				273DA3451BFE6A8500FD7023 /* Mocker.swift */,
 			);
 			path = SwiftVendingMachineTests;
 			sourceTree = "<group>";
@@ -268,6 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273DA3441BFE67D200FD7023 /* LaunchScreen.storyboard in Resources */,
+				273DA3431BFE67CD00FD7023 /* Assets.xcassets in Resources */,
+				273DA3421BFE67C900FD7023 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +296,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271B72F01BFE70610020AF84 /* Main.storyboard in Resources */,
+				271B72EF1BFE705C0020AF84 /* Assets.xcassets in Resources */,
+				271B72EE1BFE70560020AF84 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,11 +325,14 @@
 			files = (
 				27E9A2721BFCC1D30064ECCE /* SecondViewController.swift in Sources */,
 				27E9A2711BFCC1D10064ECCE /* FirstViewController.swift in Sources */,
+				273DA3461BFE6A8500FD7023 /* Mocker.swift in Sources */,
+				273DA3481BFE6AA200FD7023 /* MockMachine.swift in Sources */,
 				27E9A2751BFCC9410064ECCE /* Machine.swift in Sources */,
 				27E9A2701BFCC1CE0064ECCE /* AppDelegate.swift in Sources */,
 				274071451BFD20020021FF5D /* TestUtils.swift in Sources */,
 				27E9A2581BFCC0080064ECCE /* SwiftVendingMachineTests.swift in Sources */,
 				2740714A1BFE196E0021FF5D /* Coin.swift in Sources */,
+				273DA3411BFE675100FD7023 /* FirstViewControllerTests.swift in Sources */,
 				27E9A2791BFCCBDC0064ECCE /* CoinEnum.swift in Sources */,
 				2740714E1BFE1E8E0021FF5D /* InsertCoinSlotRepo.swift in Sources */,
 			);
@@ -315,11 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271B72F31BFE706B0020AF84 /* AppDelegate.swift in Sources */,
+				271B72F11BFE70650020AF84 /* SecondViewController.swift in Sources */,
 				27E9A2631BFCC0080064ECCE /* SwiftVendingMachineUITests.swift in Sources */,
 				27E9A2761BFCC9420064ECCE /* Machine.swift in Sources */,
 				2740714B1BFE196F0021FF5D /* Coin.swift in Sources */,
 				2740714F1BFE1E8F0021FF5D /* InsertCoinSlotRepo.swift in Sources */,
 				27E9A27A1BFCCBDD0064ECCE /* CoinEnum.swift in Sources */,
+				271B72F21BFE70680020AF84 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
